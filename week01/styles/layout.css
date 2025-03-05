@@ -1,0 +1,61 @@
+:root {
+    --primary: #3498db;
+    --secondary: #f1c40f;
+    --background: #fdfdfd;
+    --text: #2c3e50;
+}
+body {
+    font-family: "Roboto Mono", monospace;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: auto 1fr auto;
+    grid-template-areas:
+        "header header"
+        "main aside"
+        "footer footer";
+    gap: 1rem;
+    margin: 0;
+    padding: 0;
+    background: var(--background);
+}
+
+nav {
+    display: flex;
+    width: 100%;
+    background: #000;
+}
+main {
+    grid-area: main;
+    background: gray;
+    height: 400px;
+}
+aside {
+    grid-area: aside;
+}
+footer {
+    grid-area: footer;
+    background: gray;
+    height: 200px;
+    text-align: center;
+}
+header {
+    grid-area: header;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    gap: 2rem;
+    width: 100%;
+    padding: 1rem;
+    background: var(--primary);
+    color: whitesmoke;
+}
+ul {
+    display: flex;
+    list-style-type: none;
+    width: 100%;
+    justify-content: space-evenly;
+}
+a {
+    text-decoration: none;
+    color: var(--text);
+}
