@@ -46,7 +46,7 @@ nav a:last-of-type{
 }
 
 main{
-    width: 80%;
+    max-width: 80%;
     display: flex;
     gap: 1rem;
 }
@@ -57,7 +57,7 @@ section{
     width: 100%;
 }
 
-h3{
+h2{
     text-align: center;
     background-color: var(--primary);
     padding: 15px;
