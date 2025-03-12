@@ -1,15 +1,29 @@
-const getInput = document.querySelector("input")
-const getBtn = document.querySelector("button")
-const getList = document.querySelector("ul")
-
-const createLi = document.createElement("li")
-const createBtn = document.createElement("button")
-const createDelBtn = document.createElement("button")
+const getInput = document.querySelector("#favchap")
+const getSubmitBtn = document.querySelector("#submit")
+const getList = document.querySelector("#list")
 
 
-createLi.textContent = input.value
-createDelBtn.textContent = "❌"
-createDelBtn.ariaLabel = "Delete"
 
-createLi.append(createDelBtn)
-getList.append(createLi)
+
+getSubmitBtn.addEventListener('click',() => {
+    const createLi = document.createElement("li")
+    const createDelBtn = document.createElement("button")
+    createLi.textContent = getInput.value
+    createDelBtn.textContent = "❌"
+    createDelBtn.ariaLabel = "Delete"
+    createDelBtn.className = "delete"
+
+    
+    createDelBtn.addEventListener("click", () => {
+        createLi.remove();
+        getInput.focus();
+    });
+
+    createLi.append(createDelBtn)
+    getList.append(createLi)
+    getInput.value = ""
+})
+
+
+
+
