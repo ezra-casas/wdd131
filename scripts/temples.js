@@ -21,8 +21,14 @@ lastmodified_element.textContent = "Last modification: " + getLastModified();
 // hamburger menu
 const hamburger = document.getElementById("hamburger");
 const nav = document.querySelector("nav");
+const time = 150;
 
 hamburger.addEventListener("click", () => {
   nav.classList.toggle("show");
-  hamburger.innerHTML = nav.classList.contains("show") ? "✕" : "☰";
+  hamburger.classList.toggle("rotate")
+
+  // animation
+  setTimeout(() => {
+    hamburger.innerHTML = nav.classList.contains("show") ? "✕" : "☰";
+  }, time);
 });
