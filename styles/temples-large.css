@@ -1,0 +1,11 @@
+@media (min-width: 768px) {
+  #gallery {
+    grid-template-columns: repeat(2, 1fr); /* Two Columns */
+  }
+}
+
+@media (min-width: 1024px) {
+  #gallery {
+    grid-template-columns: repeat(3, 1fr); /* Three Columns */
+  }
+}
