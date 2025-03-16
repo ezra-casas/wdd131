@@ -4,7 +4,7 @@
 }
 
 :root {
-  --primary: #3498db;
+  --primary: #256d9e;
   --secondary: #f1c40f;
   --background: #fdfdfd;
   --text: #2c3e50;
@@ -24,6 +24,7 @@ body {
 }
 header {
   padding: 1rem;
+  border-bottom: 1px solid var(--primary);
 }
 nav{
   display: flex;
@@ -48,6 +49,12 @@ main {
   width: 90%;
   margin: 0 auto;
   text-align: center;
+}
+h1{
+    font-size: 3rem;
+    font-weight: bold;
+    color: var(--primary);
+    padding-bottom: 2rem;
 }
 
 #gallery {
@@ -83,6 +90,9 @@ figure img {
 }
 
 @media (max-width: 768px) {
+    header{
+        border: none;
+    }
     #hamburger {
         display: block;
         position: absolute;
