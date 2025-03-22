@@ -125,7 +125,6 @@ main {
     display: none;
   }
 
-  
   #weather h2::after {
     content: "⛅";
     margin-left: 0.5rem;
