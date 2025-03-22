@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" type="text/css" href="styles/place.css" />
+    <script src="scripts/place.js" defer></script>
+    <meta
+      name="description"
+      content="Ezra Casas's Place website showcasing a few data points of Washington."
+    />
+    <meta name="author" content="Ezra Casas" />
+    <title>WDD 131 - Place Website - Ezra Casas</title>
+  </head>
+  <body>
+    <header>
+      <h1>Washington</h1>
+    </header>
+
+    <main>
+      <section id="hero">
+        <!-- Using srcset or <picture> for responsive WebP images -->
+        <picture>
+          <source
+            srcset="https://placehold.co/600x400"
+            media="(max-width: 600px)"
+            type="image/webp"
+            id="small-img"
+          />
+          <source srcset="https://placehold.co/600x400" type="image/webp" />
+          <img src="https://placehold.co/600x400" alt="Scenic Destination" />
+        </picture>
+      </section>
+
+      <!-- Data Section -->
+      <section id="data">
+        <h2>Data</h2>
+        <p><strong>Label 1:</strong> Value 1</p>
+        <p><strong>Label 2:</strong> Value 2</p>
+        <p><strong>Label 3:</strong> Value 3</p>
+        <p><strong>Label 4:</strong> Value 4</p>
+      </section>
+
+      <!-- Weather Section -->
+      <section id="weather">
+        <h2>Weather</h2>
+        <img
+          src="images/weather-icon.svg"
+          alt="Weather Icon"
+          id="weather-icon-mobile"
+        />
+        <p><strong>Temp:</strong> <span id="temperature">9</span> °C</p>
+        <p><strong>Wind Speed:</strong> <span id="windSpeed">8</span> km/h</p>
+        <p><strong>Wind Chill:</strong> <span id="windChill">N/A</span></p>
+      </section>
+    </main>
+
+    <footer>
+      <p><span id="year"></span> Ezra Casas, Washington</p>
+      <p id="lastmodified"></p>
+    </footer>
+  </body>
+</html>

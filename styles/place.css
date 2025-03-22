@@ -1,0 +1,82 @@
+:root {
+    --primary-color: #ef3b2d; /* Example color (red) */
+    --secondary-color: #ffffff;
+    --text-color: #333333;
+  }
+  
+  body {
+    margin: 0;
+    font-family: sans-serif;
+    color: var(--text-color);
+    background-color: var(--secondary-color);
+  }
+  
+  /* Basic Layout for Mobile */
+  header, main, footer {
+    padding: 1rem;
+    text-align: center;
+  }
+  
+  #hero img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  #data, #weather {
+    margin: 1rem 0;
+  }
+  
+  /* Hide the emoticon in mobile, but show the SVG icon */
+  #weather h2::after {
+    content: "";
+  }
+  
+  /* Mobile weather icon */
+  #weather-icon-mobile {
+    width: 50px;
+    display: block;
+    margin: 0.5rem auto;
+  }
+  
+  /* Desktop Layout (media query) */
+  @media (min-width: 700px) {
+    body {
+      display: grid;
+      grid-template-columns: 1fr 2fr 1fr;
+      grid-template-rows: auto auto;
+      gap: 1rem;
+    }
+  
+    header {
+      grid-column: 1 / 4;
+    }
+  
+    #hero {
+      grid-column: 1 / 4;
+    }
+  
+    #data {
+      grid-column: 1 / 2;
+    }
+  
+    #weather {
+      grid-column: 3 / 4;
+      position: relative;
+    }
+  
+    footer {
+      grid-column: 1 / 4;
+    }
+  
+    /* Hide SVG icon on desktop */
+    #weather-icon-mobile {
+      display: none;
+    }
+  
+    /* Use a pseudo-element for the weather icon in desktop */
+    #weather h2::after {
+      content: "⛅"; /* Emoticon or symbol for weather */
+      margin-left: 0.5rem;
+    }
+  }
+  
