@@ -16,6 +16,10 @@
     padding: 1rem;
     text-align: center;
   }
+  main{
+    display: flex;
+    flex-direction: column;
+  }
   
   #hero img {
     max-width: 100%;
