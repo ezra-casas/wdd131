@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" type="text/css" href="styles/place.css" />
+    <script src="scripts/place.js" defer></script>
+    <meta
+      name="description"
+      content="Ezra Casas's Place website showcasing a few data points of Washington."
+    />
+    <meta name="author" content="Ezra Casas" />
+    <title>WDD 131 - Place Website - Ezra Casas</title>
+  </head>
+  <body>
+    <header>
+      <h1>Washington</h1>
+    </header>
+
+    <main>
+      <section id="hero">
+        <picture>
+          <source
+            srcset="images/space-needle.webp"
+            media="(max-width: 600px)"
+            type="image/webp"
+            id="small-img"
+          />
+          <source srcset="images/space-needle.webp" type="image/webp" />
+          <img src="images/space-needle.webp" alt="Seattle's space needle" />
+        </picture>
+      </section>
+
+      <div class="hero-overlay">
+        <!-- Data Section -->
+        <section id="data">
+          <h2>Data</h2>
+          <p><strong>Area:</strong> 71,362 sq mi (184,830 km²)</p>
+          <p><strong>Population:</strong> 7,951,150 (2023 est.)</p>
+          <p><strong>Capital:</strong> Olympia</p>
+          <p><strong>Languages:</strong> English (82.51%), Spanish (7.79%)</p>
+          <p><strong>Currency:</strong> United States Dollar (USD)</p>
+          <p><strong>Time Zone:</strong> Pacific Time (PDT, UTC-7)</p>
+          <p><strong>Calling Code:</strong> +1 (206, 253, 360, 425, 564)</p>
+          <p><strong>Internet TLD:</strong> .us</p>
+        </section>
+        <!-- Weather Section -->
+        <section id="weather">
+          <h2>Weather</h2>
+          <svg
+            enable-background="new 0 0 512 512"
+            height="50px"
+            id="weather-icon-mobile"
+            version="1.1"
+            viewBox="0 0 512 512"
+            width="50px"
+            xml:space="preserve"
+            xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink"
+          >
+            <g>
+              <path
+                d="M456.087,367.839   c0,21.452-17.396,39.161-38.814,39.161H209.109c-34.792,0-62.432-28.538-62.432-63.33c0-14.611,4.985-28.055,13.374-38.781   c11.483-14.817,29.428-24.341,49.609-24.341c3.025,0,6.016,0.086,8.939,0.533c6.326-25.75,22.518-47.641,44.349-61.358   c15.505-9.798,33.898-15.432,53.563-15.432c55.66,0,100.765,45.107,100.765,100.767c0,8.182-0.963,16.125-2.819,23.757   c0.928-0.069,1.857,0.071,2.819,0.071C438.692,328.885,456.087,346.42,456.087,367.839z"
+                fill="none"
+                stroke="#000000"
+                stroke-miterlimit="10"
+                stroke-width="30"
+              />
+              <path
+                d="M262.946,219.73   c-21.831,13.717-38.023,35.617-44.349,61.366c-2.922-0.447-5.913-0.516-8.939-0.516c-20.18,0-38.126,9.557-49.609,24.375   c-23.034-12.136-38.745-36.27-38.745-64.117c0-39.983,32.42-72.402,72.402-72.402C226.367,168.436,253.939,190.027,262.946,219.73z   "
+                fill="none"
+                stroke="#000000"
+                stroke-miterlimit="10"
+                stroke-width="30"
+              />
+              <line
+                fill="none"
+                stroke="#000000"
+                stroke-miterlimit="10"
+                stroke-width="30"
+                x1="194"
+                x2="194"
+                y1="105"
+                y2="143"
+              />
+              <line
+                fill="none"
+                stroke="#000000"
+                stroke-miterlimit="10"
+                stroke-width="30"
+                x1="56"
+                x2="94"
+                y1="242"
+                y2="242"
+              />
+              <line
+                fill="none"
+                stroke="#000000"
+                stroke-miterlimit="10"
+                stroke-width="30"
+                x1="261.622"
+                x2="289.547"
+                y1="174.171"
+                y2="146.246"
+              />
+              <line
+                fill="none"
+                stroke="#000000"
+                stroke-miterlimit="10"
+                stroke-width="30"
+                x1="93.782"
+                x2="121.707"
+                y1="337.075"
+                y2="309.15"
+              />
+              <line
+                fill="none"
+                stroke="#000000"
+                stroke-miterlimit="10"
+                stroke-width="30"
+                x1="93.782"
+                x2="121.707"
+                y1="146.246"
+                y2="174.171"
+              />
+            </g>
+          </svg>
+          <p><strong>Temp:</strong> <span id="temperature">9</span> °C</p>
+          <p><strong>Wind Speed:</strong> <span id="windSpeed">8</span> km/h</p>
+          <p><strong>Wind Chill:</strong> <span id="windChill">N/A</span></p>
+        </section>
+      </div>
+    </main>
+
+    <footer>
+      <p><span id="year"></span> Ezra Casas, Washington</p>
+      <p id="lastmodified"></p>
+    </footer>
+  </body>
+</html>
