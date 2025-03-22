@@ -1,86 +1,133 @@
 :root {
-    --primary-color: #ef3b2d; /* Example color (red) */
-    --secondary-color: #ffffff;
-    --text-color: #333333;
-  }
-  
+  --primary-color: #ef3b2d; 
+  --secondary-color: #ffffff; 
+  --text-color: #333333;
+  --accent-color: #2e8b57; 
+}
+
+body {
+  margin: 0;
+  font-family: sans-serif;
+  color: var(--text-color);
+  background-color: var(--secondary-color);
+}
+
+/* Basic Layout for Mobile */
+header, main, footer {
+  padding: 1rem;
+  text-align: center;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+}
+
+#hero {
+  position: relative; 
+}
+
+#hero img {
+  max-width: 100%;
+  height: auto;
+  display: block; 
+}
+
+#data, #weather {
+  margin: 1rem 0;
+  background-color: var(--secondary-color);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.6); 
+  padding: 1rem;
+  border-radius: 5px;
+}
+
+/* Style the section headings */
+#data h2, #weather h2 {
+  margin: 0;
+  padding: 0.5rem;
+  color: var(--secondary-color); 
+  border-radius: 5px 5px 0 0;
+}
+
+#data h2 {
+  background-color: var(--primary-color); 
+}
+
+#weather h2 {
+  background-color: var(--accent-color); 
+}
+
+
+#weather h2::after {
+  content: "";
+}
+
+/* Mobile weather icon */
+#weather-icon-mobile {
+  width: 50px;
+  display: block;
+  margin: 0.5rem auto;
+}
+
+/* Desktop Layout (media query) */
+@media (min-width: 700px) {
   body {
-    margin: 0;
-    font-family: sans-serif;
-    color: var(--text-color);
-    background-color: var(--secondary-color);
+    display: grid;
+    grid-template-columns: 1fr minmax(0, 800px) 1fr;
+    grid-template-rows: auto auto;
+    gap: 1rem;
+    justify-content: center;
   }
-  
-  /* Basic Layout for Mobile */
-  header, main, footer {
-    padding: 1rem;
-    text-align: center;
+
+  header {
+    grid-column: 1 / 4;
   }
-  main{
+
+  main {
+    grid-column: 2 / 3;
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 0;
+    margin: 0;
   }
-  
-  #hero img {
-    max-width: 100%;
-    height: auto;
+
+  #hero {
+    grid-column: 1 / 3;
+    
   }
-  
+  #hero img{
+    border-radius: 8px;
+  }
+
+  .hero-overlay{
+    position: absolute;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
   #data, #weather {
-    margin: 1rem 0;
+    width: 200px;
+  }
+  #weather{
+    grid-column: 3/4;
+  }
+  #weather{
+    right: 200px;
   }
   
-  /* Hide the emoticon in mobile, but show the SVG icon */
-  #weather h2::after {
-    content: "";
+  footer {
+    grid-column: 1 / 4;
   }
-  
-  /* Mobile weather icon */
+
   #weather-icon-mobile {
-    width: 50px;
-    display: block;
-    margin: 0.5rem auto;
+    display: none;
   }
+
   
-  /* Desktop Layout (media query) */
-  @media (min-width: 700px) {
-    body {
-      display: grid;
-      grid-template-columns: 1fr 2fr 1fr;
-      grid-template-rows: auto auto;
-      gap: 1rem;
-    }
-  
-    header {
-      grid-column: 1 / 4;
-    }
-  
-    #hero {
-      grid-column: 1 / 4;
-    }
-  
-    #data {
-      grid-column: 1 / 2;
-    }
-  
-    #weather {
-      grid-column: 3 / 4;
-      position: relative;
-    }
-  
-    footer {
-      grid-column: 1 / 4;
-    }
-  
-    /* Hide SVG icon on desktop */
-    #weather-icon-mobile {
-      display: none;
-    }
-  
-    /* Use a pseudo-element for the weather icon in desktop */
-    #weather h2::after {
-      content: "⛅"; /* Emoticon or symbol for weather */
-      margin-left: 0.5rem;
-    }
+  #weather h2::after {
+    content: "⛅";
+    margin-left: 0.5rem;
   }
-  
+}
