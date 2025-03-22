@@ -7,7 +7,7 @@
 
 body {
   margin: 0;
-  font-family: sans-serif;
+  font-family: 'Roboto', sans-serif;
   color: var(--text-color);
   background-color: var(--secondary-color);
 }
@@ -125,7 +125,6 @@ main {
     display: none;
   }
 
-  
   #weather h2::after {
     content: "⛅";
     margin-left: 0.5rem;
