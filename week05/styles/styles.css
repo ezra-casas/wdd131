@@ -1,0 +1,170 @@
+body {
+    font-family: Arial, sans-serif;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    color: #333;
+    transition: all 0.3s ease;
+}
+
+body.dark-mode {
+    background-color: #1a1a1a;
+    color: #ddd;
+}
+
+/* Theme Switch Styles */
+.theme-switch-wrapper {
+    display: flex;
+    align-items: center;
+    justify-self: end;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.theme-switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+}
+
+.theme-switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: 0.4s;
+    border-radius: 34px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    transition: 0.4s;
+    border-radius: 50%;
+}
+
+input:checked + .slider {
+    background-color: #2196F3;
+}
+
+input:checked + .slider:before {
+    transform: translateX(26px);
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    border: 2px solid black;
+    padding: 1rem;
+    border-radius: 8px;
+    max-width: 1200px;
+}
+
+label {
+    font-weight: bold;
+}
+
+select, input[type="date"], input[type="text"], textarea {
+    width: 100%;
+    max-width: 300px;
+    padding: 8px;
+    margin-top: 5px;
+    background-color: #fff;
+    color: #333;
+}
+
+body.dark-mode select,
+body.dark-mode input[type="date"],
+body.dark-mode input[type="text"],
+body.dark-mode textarea {
+    background-color: #333;
+    color: #ddd;
+    border: 1px solid #555;
+}
+
+.rating {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+    gap: 10px;
+}
+
+.rating input {
+    display: none;
+}
+
+.rating label {
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.rating label:hover,
+.rating label:hover ~ label {
+    color: #ffd700;
+}
+
+.rating input:checked ~ label {
+    color: #ffd700;
+}
+
+.checkbox-group {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 1.2rem;
+    direction: rtl;
+    text-align: center;
+}
+
+textarea {
+    min-height: 100px;
+    resize: vertical;
+}
+
+input[type="submit"] {
+    width: fit-content;
+    padding: 10px 20px;
+    background-color: #456ba0;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+body.dark-mode input[type="submit"] {
+    background-color: #456ba0;
+}
+
+input[type="submit"]:hover {
+    background-color: #5e8fd2;
+}
+
+body.dark-mode input[type="submit"]:hover {
+    background-color: #4f7ab7;
+}
+
+footer {
+    margin-top: 2rem;
+    text-align: center;
+    color: #666;
+}
+
+body.dark-mode footer {
+    color: #999;
+}

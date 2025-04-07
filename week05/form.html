@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ezra Casas - Product Review Form</title>
+    <link rel="stylesheet" href="./styles/styles.css">
+    <script src="./script/script.js" defer></script>
+</head>
+<body>
+    <h1>Ezra Casas - Product Review Form</h1>
+    <!-- Theme switcher -->
+    <div class="theme-switch-wrapper">
+        <label class="theme-switch" for="theme-toggle">
+            <input type="checkbox" id="theme-toggle">
+            <span class="slider"></span>
+        </label>
+        <span id="theme">Dark Mode</span>
+    </div>
+    
+    <form method="get" action="review.html">
+        <label for="product-name">Product Name:</label>
+        <select id="product-name" name="product" required>
+            <option value="" disabled selected>Select a Product ...</option>
+            
+        </select>
+
+        
+        <fieldset>
+            <legend>Overall Rating:</legend>
+            <div class="rating">
+                <input type="radio" id="star5" name="rating" value="5" required>
+                <label for="star5">☆</label>
+                <input type="radio" id="star4" name="rating" value="4">
+                <label for="star4">☆</label>
+                <input type="radio" id="star3" name="rating" value="3">
+                <label for="star3">☆</label>
+                <input type="radio" id="star2" name="rating" value="2">
+                <label for="star2">☆</label>
+                <input type="radio" id="star1" name="rating" value="1">
+                <label for="star1">☆</label>
+            </div>
+        </fieldset>
+
+        <!-- Date of Installation -->
+        <label for="install-date">Installation Date:</label>
+        <input type="date" id="install-date" name="installDate" required>
+
+        <!-- Useful Features -->
+        <fieldset>
+            <legend>Useful Features:</legend>
+            <div class="checkbox-group">
+                <input type="checkbox" id="feature1" name="features" value="durability">
+                <label for="feature1">Durability</label>
+                <input type="checkbox" id="feature2" name="features" value="design">
+                <label for="feature2">Design</label>
+                <input type="checkbox" id="feature3" name="features" value="performance">
+                <label for="feature3">Performance</label>
+            </div>
+        </fieldset>
+
+        <!-- Written Review -->
+        <label for="review-text">Written Review:</label>
+        <textarea id="review-text" name="review"></textarea>
+
+        <!-- User Name -->
+        <label for="user-name">Your Name:</label>
+        <input type="text" id="user-name" name="username">
+
+        <!-- Submit Button -->
+        <input type="submit" value="Submit Review">
+    </form>
+
+    <footer>
+        <p>&copy; 2025 Your Name. All rights reserved.</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
