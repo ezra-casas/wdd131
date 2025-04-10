@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Top Attractions - Explore Osaka</title>
+  <link rel="stylesheet" href="./styles/styles.css" />
+  <script src="./scripts/script.js"></script>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1>Explore Osaka</h1>
+      <nav>
+        <ul class="nav">
+          <li><a href="./index.html">Home</a></li>
+          <li><a href="./attractions.html" class="active">Attractions</a></li>
+          <li><a href="./food.html">Food</a></li>
+          <li><a href="./contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <button id="theme-toggle">🌙 Dark Mode</button>
+    </div>
+  </header>
+
+  <main class="container">
+    <section>
+      <h2>Top Attractions in Osaka</h2>
+      <p>Explore the must-see attractions that showcase the culture, history, and modern charm of Osaka.</p>
+      <ul>
+        <li><strong>Osaka Castle:</strong> A symbol of the city with stunning views and rich history.</li>
+        <li><strong>Dotonbori:</strong> The iconic entertainment district full of bright lights and delicious street food.</li>
+        <li><strong>Shitennoji Temple:</strong> One of Japan’s oldest temples, offering a serene experience.</li>
+        <li><strong>Umeda Sky Building:</strong> Modern architecture with breathtaking panoramic views of the city.</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="container">
+    <p>&copy; 2025 Explore Osaka. All rights reserved.</p>
+  </footer>
+
+  <script>
+    document.getElementById('theme-toggle').addEventListener('click', () => {
+      document.body.classList.toggle('dark-mode');
+    });
+  </script>
+</body>
+</html>

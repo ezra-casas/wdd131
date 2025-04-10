@@ -1,0 +1,232 @@
+/* Importing Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&family=Roboto:wght@300;400;500&display=swap');
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #fff;
+  color: #333;
+  margin: 0; 
+  line-height: 1.6;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+header {
+  background-color: #fff;
+  border-bottom: 2px solid #DC143C;
+  padding: 1rem 0;
+  margin-bottom: 2rem;
+}
+
+h1, h2 {
+  font-family: 'Oswald', sans-serif;
+  color: #DC143C;
+}
+
+ul {
+  padding-left: 1.5rem;
+}
+
+button#theme-toggle {
+  /* background-color: #DC143C; */
+  background-color: #2c2c2c;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  float: right;
+  margin-top: -2.5rem;
+}
+
+button#theme-toggle:hover {
+  background-color: #525252;
+}
+
+footer {
+  border-top: 1px solid #ccc;
+  margin-top: 2rem;
+  padding-top: 1rem;
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+.nav {
+  list-style: none;
+  padding: 0;
+  margin: 1rem 0;
+  display: flex;
+  gap: 1rem;
+}
+
+.nav li {
+  display: inline;
+}
+
+.nav a {
+  text-decoration: none;
+  color: #DC143C;
+  font-weight: 500;
+}
+
+.nav a.active,
+.nav a:hover {
+  border-bottom: 2px solid #DC143C;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+input, textarea {
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+button[type="submit"] {
+  background-color: #3e3d3d;
+  color: white;
+  border: none;
+  padding: 0.75rem 1.25rem;
+  font-size: 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  width: fit-content;
+}
+
+button[type="submit"]:hover {
+  background-color: #3e3d3d;
+}
+
+/* Dark Mode */
+body.dark-mode {
+  background-color: #1e1e1e;
+  color: #f1f1f1;
+}
+
+body.dark-mode header {
+  background-color: #1e1e1e;
+  border-color: #FFD700;
+}
+
+body.dark-mode h1, 
+body.dark-mode h2,
+body.dark-mode .nav a {
+  color: #FFD700;
+}
+
+body.dark-mode .nav a.active,
+body.dark-mode .nav a:hover {
+  border-color: #FFD700;
+}
+
+body.dark-mode input,
+body.dark-mode textarea {
+  background-color: #2c2c2c;
+  color: #fff;
+  border-color: #666;
+}
+
+body.dark-mode button[type="submit"] {
+  background-color: #DC143C;
+  color: #fff;
+  font-weight: bold;
+}
+
+body.dark-mode button[type="submit"]:hover {
+  background-color: #ff4167;
+  font-weight: bold;
+}
+
+body.dark-mode button#theme-toggle {
+  background-color: #DC143C;
+  color: #1e1e1e;
+  font-weight: bold;
+}
+
+body.dark-mode button#theme-toggle:hover {
+  background-color: #ff4167;
+}
+
+/* Nav Toggle (Hamburger/X) */
+#nav-toggle {
+  background: none;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+  display: none;
+  transition: transform 0.3s ease;
+  color: #DC143C;
+  margin-left: auto;
+}
+
+/* Nav default desktop layout */
+.nav {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+  padding: 0;
+  margin: 1rem 0;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  #nav-toggle {
+    display: block;
+    position: absolute;
+    top: 1.5rem;
+    right: 5.5rem;
+    z-index: 1000;
+  }
+
+  nav#main-nav {
+    display: none;
+    flex-direction: column;
+    background-color: #fff;
+    padding: 1rem;
+    position: absolute;
+    top: 4.5rem;
+    right: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  }
+
+  nav#main-nav.open {
+    display: flex;
+    animation: fadeIn 0.3s ease-in-out;
+  }
+
+  .nav {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  body.dark-mode nav#main-nav {
+    background-color: #2c2c2c;
+    border-color: #444;
+  }
+
+  body.dark-mode #nav-toggle {
+    color: #FFD700;
+  }
+}
+
+/* Hamburger Icon Transform */
+#nav-toggle::before {
+  content: '☰'; /* ☰ */
+}
+
+#nav-toggle.open::before {
+  content: '✕'; /* ✕ */
+}
