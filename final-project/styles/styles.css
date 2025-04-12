@@ -56,7 +56,14 @@ footer {
   text-align: center;
   font-size: 0.9rem;
 }
-
+footer a{
+  color: #525252;
+  text-decoration: none;
+  font-weight: bolder;
+  border: 1px #525252 solid;
+  padding: 10px;
+  border-radius: 4px;
+}
 .nav {
   list-style: none;
   padding: 0;
@@ -139,7 +146,7 @@ body.dark-mode textarea {
 
 body.dark-mode button[type="submit"] {
   background-color: #DC143C;
-  color: #fff;
+  color: #000;
   font-weight: bold;
 }
 
@@ -150,7 +157,7 @@ body.dark-mode button[type="submit"]:hover {
 
 body.dark-mode button#theme-toggle {
   background-color: #DC143C;
-  color: #1e1e1e;
+  color: #000;
   font-weight: bold;
 }
 
@@ -168,6 +175,7 @@ body.dark-mode button#theme-toggle:hover {
   transition: transform 0.3s ease;
   color: #DC143C;
   margin-left: auto;
+  
 }
 
 /* Nav default desktop layout */
@@ -229,4 +237,48 @@ body.dark-mode button#theme-toggle:hover {
 
 #nav-toggle.open::before {
   content: '✕'; /* ✕ */
+}
+
+
+.gallery {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.card {
+  background-color: #eae9e9;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+  padding: 1rem;
+  text-align: center;
+  transition: transform 0.2s ease;
+  cursor: pointer;
+  color: black;
+}
+
+.card:hover {
+  transform: scale(1.02);
+}
+
+.gallery img {
+  width: 100%;
+  height: auto;
+  border-radius: 6px;
+  margin-bottom: 0.5rem;
+}
+
+* Dark mode adaptation */
+body.dark-mode .card {
+  background-color: #2c2c2c;
+  box-shadow: 0 2px 5px rgba(255, 255, 255, 0.05);
+  color: black;
+}
+
+/* Desktop and up */
+@media (min-width: 960px) {
+  .gallery {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
