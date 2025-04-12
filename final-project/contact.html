@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us - Explore Osaka</title>
+  <link rel="stylesheet" href="./styles/styles.css" />
+  <script src="./scripts/script.js" defer></script>
+</head>
+<body>
+    <header>
+        <div class="container">
+          <h1>Explore Osaka</h1>
+      
+          <!-- Hamburger Button -->
+          <button id="nav-toggle" aria-label="Toggle navigation"></button>
+      
+          <!-- Navigation Menu -->
+          <nav id="main-nav">
+            <ul class="nav">
+              <li><a href="./index.html" >Home</a></li>
+              <li><a href="./attractions.html">Attractions</a></li>
+              <li><a href="./food.html" >Food</a></li>
+              <li><a href="./contact.html" class="active">Contact</a></li>
+            </ul>
+      
+            <!-- Dark mode toggle inside nav for mobile -->
+            <div class="mobile-theme-toggle">
+              <button id="theme-toggle">🌙 Dark Mode</button>
+            </div>
+          </nav>
+        </div>
+
+  <main class="container">
+    <section>
+      <h2>Contact Us</h2>
+      <p>If you have questions, travel tips, or just want to say hello — send us a message below!</p>
+      <form action="#" method="post">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required />
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required />
+
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" rows="5" required></textarea>
+
+        <button type="submit">Send Message</button>
+      </form>
+    </section>
+  </main>
+
+  <footer class="container">
+    <a href="./references.html">References</a>
+    <p>&copy; 2025 Explore Osaka. Made by Ezra C.</p>
+  </footer>
+
+</body>
+</html>
