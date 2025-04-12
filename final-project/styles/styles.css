@@ -144,6 +144,11 @@ body.dark-mode textarea {
   border-color: #666;
 }
 
+body.dark-mode footer a{
+  border: 1px solid #fff;
+  color: #fff;
+}
+
 body.dark-mode button[type="submit"] {
   background-color: #DC143C;
   color: #000;
